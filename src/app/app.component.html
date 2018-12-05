@@ -1,0 +1,56 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="wrapper">
+    <!-- Navigation -->
+    <!--  <app-navigation></app-navigation> -->
+
+    <div class="navcontainer">
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar indigo">
+            <a class="navbar-brand" routerLink="/app-main" href="/app-main">Transitions</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a routerLink="/app-main" class="nav-link" href="/app-main">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/app-about" class="nav-link" href="/app-about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/app-services" class="nav-link" href="/app-services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/app-contact']">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+
+        </nav>
+
+    </div>
+    <!-- ./navcontainer -->
+
+
+    <!-- End Nav -->
+    <!-- <app-header></app-header>
+
+    <h4 class="text-center">{{title}} Demo</h4>-->
+
+    <div id="page" class="routeContainer" [@routeAnimation]="getDepth(myOutlet)">
+        <!-- <div style="text-align:center"></div> -->
+        <router-outlet #myOutlet="outlet"></router-outlet>
+
+        <!-- ./container mainbody-->
+        <div class="footer text-center indigo">
+            <a routerLink="/app-main" class="d-inline">Home</a> |
+            <a routerLink="/app-about" class="d-inline">About</a> |
+            <a routerLink="/app-services" class="d-inline">Services</a> |
+            <a routerLink="/app-contact" class="d-inline">Contact</a>
+        </div>
+    </div>
+    <!-- ./wrapper -->
